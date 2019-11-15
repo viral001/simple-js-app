@@ -1,3 +1,7 @@
+alert('Hello world');
+
+var favoriteFood='pizza';
+document.write(favoriteFood);
 
 var myName='Viral';
 document.write(myName);
