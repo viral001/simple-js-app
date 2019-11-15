@@ -1,6 +1,6 @@
 alert('Hello world');
 
-var favoriteFood='pizza';
+var favoriteFood='pizzas';
 document.write(favoriteFood);
 
 var myName='Viral';
