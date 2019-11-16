@@ -1,4 +1,4 @@
-var repository = [ /* repository of pokemon ];
+var repository = [ /* repository of pokemon*/
   {
     name: 'Wartortle';
     height: '1m';
@@ -23,3 +23,4 @@ var repository = [ /* repository of pokemon ];
     weight: '90.5kg';
     type: 'fire, flying';
   }
+]
