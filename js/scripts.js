@@ -23,4 +23,9 @@ var repository = [ /* repository of pokemon*/
     weight: 90.5,
     type: ['fire, flying']
   }
-]
+];
+
+for (items in repository)
+  {
+    document.write(repository[items].name '(height:' + repository[items].height + 'm)<br>)';
+  }
