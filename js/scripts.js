@@ -27,10 +27,10 @@ var repository = [ /* repository of pokemon*/
 
 for (items in repository)
   {
-    document.write(repository[items].name '(height:' + repository[items].height + 'm)<br>)';
+    document.write(repository[items].name + '(height:' + repository[items].height + 'm)<br>');
     if (repository[items].height > 1)
     {
-      document.write(repository[items].name + '(height: ' + repository[items].height + 'm) - wow, that`s to big!<br><br>'')
+      document.write(repository[items].name + '(height: ' + repository[items].height + 'm) - wow, that`s to big!<br><br>')
     }
     else {
       document.write(repository[items].name + '(height: ' + repository[items].height + 'm)<br><br>');
