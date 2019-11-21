@@ -36,3 +36,11 @@ for (items in repository)
       document.write(repository[items].name + '(height: ' + repository[items].height + 'm)<br><br>');
     }
   }
+
+  function divide (dividend, divisor){
+    if (divisor === 0){
+      return "you`re trying to divide by zero."
+    }else{
+      var result = dividend / divisor;
+    }
+  }
