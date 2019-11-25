@@ -27,14 +27,14 @@ function add(pokemon) {
 
 return {
   add: add,
-  getall: getall
+  getAll: getAll
 }
 })();
 
 var pokemon = {name: 'Wartortle',
 height: 1,
 types: ["water"]};
-var getall= pokemonrepository.getall();
+var getAll= pokemonrepository.getAll();
 
 pokemonrepository.add(pokemon)
 
