@@ -1,31 +1,47 @@
-
 var repository = [ /* repository of pokemon*/
 {
   name: 'Wartortle',
   height: 1,
-  weight: 22.5,
   type: ['water']
 },
 {
   name: 'Blastoise',
   height: 1.6,
-  weight: 85.5,
   type: ['water']
 },
 {
   name: 'Bulbasaur',
   height: 0.7,
-  weight: 6.90,
   type: ['grass , poison']
 },
 {
   name: 'Charizard',
   height: 1.7,
-  weight: 90.5,
   type: ['fire, flying']
-
 },
 ];
+
+function add(pokemon) {
+  repository.push(pokemon);
+}
+
+return {
+  add: add,
+  getall: getall
+}
+})();
+
+var pokemon = {name: 'Wartortle',
+height: 1,
+types: ["water"]};
+var getall= pokemonrepository.getall();
+
+pokemonrepository.add(pokemon)
+
+getall.forEach(function(currentItems){
+    document.write('name:' + currentItems.name + '<br>' + 'height:' + currentItems.height + '<br>' + 'type:' + currentItems.type + '<br>');
+  })
+
 for (items in repository){
   document.write(repository[items].name + '(height:' + repository[items].height + 'm)<br>');
     if (repository[items].height > 1){
@@ -33,7 +49,3 @@ for (items in repository){
     else {
   document.write(repository[items].name + '(height: ' + repository[items].height + 'm)<br><br>');}
 }
-
-repository.forEach(function(currentItems){
-    document.write('name:' + currentItems.name + '<br>' + 'height:' + currentItems.height + '<br>' + 'type:' + currentItems.type + '<br>');
-  })
