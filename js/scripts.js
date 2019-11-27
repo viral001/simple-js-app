@@ -1,3 +1,4 @@
+var pokemonrepository = (function () {
 var repository = [ /* repository of pokemon*/
 {
   name: 'Wartortle',
@@ -25,26 +26,29 @@ function add(pokemon){
   repository.push(pokemon);
 }
 
+function getAll(){
+  return repository;
+}
+
 return {
   add: add,
   getAll: getAll
+
 };
+})();
 
-var pokemon = {name: 'Wartortle',
-height: 1,
-types: ["water"]};
-var getAll= pokemonrepository.getAll();
+pokemonrepository.getAll().forEach(function(pokemon){document.write('<p>'+ pokemon.name+'</p>')})
 
-pokemonrepository.add(pokemon)
 
-getall.forEach(function(currentItems){
-    document.write('name:' + currentItems.name + '<br>' + 'height:' + currentItems.height + '<br>' + 'type:' + currentItems.type + '<br>');
-  })
-
-for (items in repository){
-  document.write(repository[items].name + '(height:' + repository[items].height + 'm)<br>');
-    if (repository[items].height > 1){
-  document.write(repository[items].name + '(height: ' + repository[items].height + 'm) - wow, that`s to big!<br><br>')}
-    else {
-  document.write(repository[items].name + '(height: ' + repository[items].height + 'm)<br><br>');}
-}
+// function loopBlockFunction(currentName){
+//   document.write("<h3> " + currentName.name + "</h3>");
+//   document.write("<p>" + 'Type: ' + currentName.types + "</p>")
+//   document.write("<p>" + 'Height: ' + currentName.height + "</p>")
+//
+//
+//   if (currentName.height > 5){
+//     document.write("<p>" + ' - Wow, that\’s big!' + "</p>");
+//
+//   }
+// }
+// pokemonRepository.forEach(loopBlockFunction);
