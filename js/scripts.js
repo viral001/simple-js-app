@@ -21,15 +21,14 @@ var repository = [ /* repository of pokemon*/
 },
 ];
 
-function add(pokemon) {
+function add(pokemon){
   repository.push(pokemon);
 }
 
 return {
   add: add,
   getAll: getAll
-}
-})();
+};
 
 var pokemon = {name: 'Wartortle',
 height: 1,
