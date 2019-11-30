@@ -1,2 +1,34 @@
-<body>
-</body>
+body {
+
+  background-color: lightgreen;
+
+
+
+}
+
+h3 {
+  background-color: yellow;
+  display: block;
+  margin: auto;
+  text-align: center;
+
+
+}
+
+p{
+  background-color: lightblue;
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+
+
+}
+
+.title {
+  background-color: pink;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+
+}
