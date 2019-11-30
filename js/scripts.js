@@ -1,70 +1,69 @@
-var $pokemonList = document.querySelector('ul');
+var pokemonRepository = (function () {
+var repository = [
 
-var pokemonRepository = (function(){
-  var repository = [
-    {
-      name: 'Bulbasaur',
-      index: 1,
-      height: 0.7,
-      weight: 6.9,
-      types: ['grass','poison']
-    },
-    {
-      name: 'Ivysaur',
-      index: 2,
-      height: 1.0,
-      weight: 13.0,
-      types: ['grass','poison']
-    },
-    {
-      name: 'Venusaur',
-      index: 3,
-      height: 2.0,
-      weight: 100.0,
-      types: ['grass','poison']
-    }
-  ];
+  {name:"Bulbasaur",
+  height: 7,
+  types: ['grass', 'poison']},
 
-  //Function to add new Pokemon data
-  function add(pokemon){
-    //Must be an 'object' type
-    if (typeof pokemon !== 'object'){
-      return 'Not a valid input'
-    }else{
-    repository.push(pokemon);
-    }
-  }
+  {name:"Jigglypuff",
+  height: 0.5,
+  types: "Balloon"},
 
-  //Function to pull all Pokemon data
-  function getAll(){
-    return repository;
-  }
+  {name:"Snorlax",
+  height: 2.1,
+  types: "Dozing"},
 
-  function addListItem(pokemon){
-    var listItem = document.createElement('li');
-    var button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('new-style');
-    listItem.appendChild(button);
-    $pokemonList.appendChild(listItem)
-    button.addEventListener('click', function (){
-      showDetails(pokemon)
-    })
-  }
+  {name:"Lickilicky",
+  height: 1.7,
+  types: ['Licking', 'Supersonic']}
 
-  function showDetails(pokemon){
-    console.log(pokemon)
-  }
+];
 
-  return{
-    add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    showDetails: showDetails
-  };
+function add(pokemon) {
+  repository.push(pokemon);
+}
+
+function getAll() {
+  return repository;
+
+}
+
+return {
+  add: add,
+  getAll: getAll
+
+}
+
+function addListItem (pokemon){
+
+}
+
 })();
 
-//Creates list of Pokemon with Pokemon's name on the button
-pokemonRepository.getAll().forEach(function(currentItem){
-  pokemonRepository.addListItem(currentItem);
-})
+var $pokemonList = document.querySelector('.pokemon-list');   //create a variable above the forEach loop block, then assign it the ul element you just added to your “index.html” file
+
+//forEach loop
+pokemonRepository.getAll().forEach(function (list){
+
+  var $listItem = document.createElement('li');   //create an li element that contains a button for each Pokémon
+  var $pokemonDetailsButton = document.createElement('button');
+  $pokemonDetailsButton.innerText = pokemon.name;                      //Set the innerText of the button to be the Pokémon's name
+  $pokemonDetailsButton.classList.add('button__style');   //Add a class to the button using the classList.add method
+  $listItem.appendChild($pokemonDetailsButton);      //append the button to the list item as its child.
+  $listItem.classList.add('pokemon-list__item');
+  $pokemonList.appendChild($listItem);           //append the list item to the unordered list as its child.
+
+
+});
+
+
+
+
+
+
+
+
+// var $title = document.querySelector('.title');
+// var button = document.createElement('button');
+// button.innerText = "Pokemon app";
+// $title.appendChild(button);
