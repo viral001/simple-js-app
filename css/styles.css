@@ -1,76 +1,126 @@
+/*
+Colors used
+Text Color (LightSlateGrey): #000;
+Primary Color (some orange): #D35323;
+Secondary Color (some green): #5CB85C;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #D35323;
+  --secondary-color: #5CB85C;
+  --text-color: #000;
+}
+
 body {
 
-  background-color: lightgreen;
-
-
+  background-color: #475051;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
-h3 {
-  background-color: yellow;
-  display: block;
-  margin: auto;
-  text-align: center;
-
+h3{
+  color: WhiteSmoke;
+  font-size: 20px;
 
 }
 
 p {
-  background-color: lightblue;
   display: block;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
   text-align: center;
 
+}
+
+.container {
+  display: block;
+  flex-direction: column;
+  margin: auto;                     /* this holds list of pokemons*/
+  padding: 10px;
+  max-width: 500px;
 
 }
 
 .title {
-  background-color: pink;
-  margin: 20px;
-  padding: 10px;
+
   text-align: center;
+  display: block;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 10px;
+  margin: auto;
+  margin border-top: 15px;
 
 }
 
 .pokemon-list__item {
 
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50; /* Green */
-
+  text-decoration: none;
+  list-style-type: none;
+  display: grid;
+  max-width: 400px;
+  min-width: 100px;
+  padding: 5px;
 }
 
 .button__style {
 
-  background-color: #F5F5F5;
+  background-color: #5ce7c8;
   font-size: 14px;
   border: none;
   display: inline-block;
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
-  border-style: groove;
+  border-radius: 10px;
+  transition: 0.4s opacity, 0.5s;
 
 }
 
 .button__style:hover {
-   background-image:linear-gradient(
-      to right,
-      #E7484F,
-      #E7484F 16.65%,
-      #F68B1D 16.65%,
-      #F68B1D 33.3%,
-      #FCED00 33.3%,
-      #FCED00 49.95%,
-      #009E4F 49.95%,
-      #009E4F 66.6%,
-      #00AAC3 66.6%,
-      #00AAC3 83.25%,
-      #732982 83.25%,
-      #732982 100%,
-      #E7484F 100%
+
+  cursor: pointer;
+  opacity: 0.7;
+  background-image:     linear-gradient(
+    to right,
+    #E7484F,
+    #E7484F 16.65%,
+    #F68B1D 16.65%,
+    #F68B1D 33.3%,
+    #FCED00 33.3%,
+    #FCED00 49.95%,
+    #009E4F 49.95%,
+    #009E4F 66.6%,
+    #00AAC3 66.6%,
+    #00AAC3 83.25%,
+    #732982 83.25%,
+    #732982 100%,
+    #E7484F 100%
+
+
 
     );
-  animation:slidebg 2s linear infinite;
-}
+    animation:slidebg 2s linear infinite;
+
+
+
+  }
+
+  @keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
+
+  .follow{
+    margin-top: 40px;
+  }
+
+  .follow a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
