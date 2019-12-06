@@ -59,51 +59,44 @@ p {
 
 .pokemon-list__item {
 
-  text-decoration: none;
-  list-style-type: none;
+  background-color: #8BE9CA;
+  color: #000;
+  width: 240px;
+  height: 50px;
+  border: 0.5px outset;
+  font-size: 15px;
+  border-radius: 100px;
+}
+
+ul {
   display: grid;
-  max-width: 400px;
-  min-width: 100px;
-  padding: 5px;
-}
-
-#modal-container {
-
-  display: none;
-  position: absolute;    /* CSS for whole container */
-
-}
-
-.modal-img {
-  margin-left: 20%;
-}
-
-#modal-container.is-visible {
-
-  display: block;
-  background: #5ce7c8;
-  position:fixed;
-  justify-content: space-between;
-  right: 50px;
-  translateY(-50%);                      /* CSS for card */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  list-style-type: none;
+  position: auto;
+  width: 95%;
+  margin: 10px auto 0;
   padding: 10px;
-  border-radius: 10px;
-  transition: 0.4s opacity, 0.5s;
-  border: 10px solid gray;
-  z-index: 999;
-
+}
+li {
+  display: flow-root;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+  text-align: center;
+  transition: 0.1s opacity, 0.1s
 }
 
 .button__style {
 
   background-color: #5ce7c8;
-  font-size: 14px;
+  font-size: 20px;
   border: none;
-  display: inline-block;
+  display: inline;
   text-decoration: none;
   padding: 10px;
-  border-radius: 10px;
-  transition: 0.4s opacity, 0.5s;
+  border-radius: 240px;
+  transition: 0.1s opacity, 0.1s;
 
 }
 
@@ -126,19 +119,104 @@ p {
     #732982 83.25%,
     #732982 100%,
     #E7484F 100%
-
-
+/* Styling for list of Pokemon buttons */
 
     );
-    animation:slidebg 2s linear infinite;
+    animation:slidebg 5s linear infinite;
+}
 
+/* Styling for the details of each Pokemon */
+#modal-container {
+  display: none;
+}
 
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 
+/* To show it above other content */
+  z-index: 999;
+
+/* To allow scrolling if the screen is not high enough */
+  overflow: auto;
+
+/* This is to centre the modal */
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 15px;
+  border-style: solid;
+  background-color: #F6F5F5;
+}
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+  margin-bottom: 0px;
+  font-size: 8px;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 1310px) {
+
+  ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+@media all and (max-width: 1080px) {
+
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 800px) {
+
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 540px) {
+
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
 
   @keyframes slidebg {
     to {
-      background-position:20vw;
+      background-position:10vw;
     }
   }
 
@@ -148,6 +226,6 @@ p {
 
   .follow a{
     color: black;
-    padding: 8px 16px;
+    padding: 10px 16px;
     text-decoration: none;
   }
