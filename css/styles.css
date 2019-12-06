@@ -67,6 +67,33 @@ p {
   padding: 5px;
 }
 
+#modal-container {
+
+  display: none;
+  position: absolute;    /* CSS for whole container */
+
+}
+
+.modal-img {
+  margin-left: 20%;
+}
+
+#modal-container.is-visible {
+
+  display: block;
+  background: #5ce7c8;
+  position:fixed;
+  justify-content: space-between;
+  right: 50px;
+  translateY(-50%);                      /* CSS for card */
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.4s opacity, 0.5s;
+  border: 10px solid gray;
+  z-index: 999;
+
+}
+
 .button__style {
 
   background-color: #5ce7c8;
