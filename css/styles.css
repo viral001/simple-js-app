@@ -110,7 +110,7 @@ li {
 
 }
 
-.button__style:hover {
+button:hover, button:focus {
 
   cursor: pointer;
   opacity: 15.0;
